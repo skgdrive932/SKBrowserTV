@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Browser">
+        <EditTextPreference
+            app:defaultValue=""
+            app:key="home_url"
+            app:title="Home page (leave empty for the SK Browser home screen)"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            app:defaultValue="google"
+            app:entries="@array/search_engine_names"
+            app:entryValues="@array/search_engine_values"
+            app:key="search_engine"
+            app:title="Search engine"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:key="desktop_mode"
+            app:summary="Ask websites for their desktop version"
+            app:title="Desktop site" />
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="javascript"
+            app:summary="Takes effect the next time a page is opened"
+            app:title="JavaScript" />
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="cursor_mode"
+            app:summary="Move a pointer with the remote D-pad, OK to click"
+            app:title="Cursor mode" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Ad blocker">
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="adblock"
+            app:summary="Blocks requests to known ad and tracker domains"
+            app:title="Block ads and trackers" />
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="cosmetic"
+            app:summary="Hides leftover empty ad boxes on pages"
+            app:title="Hide ad elements" />
+        <Preference
+            app:key="clear_whitelist"
+            app:summary="Sites where you chose Allow ads from the browser menu"
+            app:title="Clear ad blocker exceptions" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="VPN (DNS shield)">
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:key="vpn_enabled"
+            app:summary="Local VPN that blocks ad and tracker domains for every app on this TV. It does not change your IP address or location."
+            app:title="Enable VPN" />
+        <ListPreference
+            app:defaultValue="1.1.1.1"
+            app:entries="@array/dns_names"
+            app:entryValues="@array/dns_values"
+            app:key="upstream_dns"
+            app:title="DNS server"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="YouTube">
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="youtube_app"
+            app:summary="If the YouTube app is installed, YouTube links open there. Turn off to always use this browser."
+            app:title="Open YouTube in the YouTube app" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Downloads">
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="ask_download"
+            app:summary="Show a confirmation before a file is downloaded"
+            app:title="Ask before downloading" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Shortcuts">
+        <Preference
+            app:key="add_current"
+            app:title="Add current page to shortcuts" />
+        <Preference
+            app:key="add_site"
+            app:summary="Type any website address to put it on the home screen"
+            app:title="Add a site" />
+        <Preference
+            app:key="reset_shortcuts"
+            app:title="Reset shortcuts to default" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Privacy">
+        <Preference
+            app:key="clear_data"
+            app:title="Clear cookies, cache and site data" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="About">
+        <Preference
+            app:key="about"
+            app:summary="By Sk Kaushal - MIT License"
+            app:title="About and license" />
+    </PreferenceCategory>
+</PreferenceScreen>
